@@ -57,7 +57,7 @@ with open (file_path, newline="") as csvfile:
 
 with open('election_results.txt', 'w') as text:
     text.write("----------------------------------------------------------\n")
-    text.write("Financial Analysis"+ "\n")
+    text.write("Election Results"+ "\n")
     text.write("----------------------------------------------------------\n")
     text.write("Total Votes: " + str(count) + "\n")
     text.write("----------------------------------------------------------\n")
