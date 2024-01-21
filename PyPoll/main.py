@@ -65,5 +65,5 @@ with open('election_results.txt', 'w') as text:
         index = list(candidate_unique).index(candidate)
         text.write(f"{candidate}: {vote_percent[index]}% ({vote_count[candidate]})\n")
     text.write("----------------------------------------------------------\n")
-    text.write("The winner is: " + winner + "\n")
+    text.write("Winner: " + winner + "\n")
     text.write("----------------------------------------------------------\n")

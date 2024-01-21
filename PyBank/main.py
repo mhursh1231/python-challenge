@@ -54,6 +54,8 @@ with open(file_path, 'r') as csvfile:
 
     #Calculate the average change in profits
     average_change_profits = (total_change_profits)/(count - 1)
+    formatted_average = format(average_change_profits, '.2f')
+    print("Average Change Profits: {}".format(formatted_average))
 
     #Find the minimum and maximum in profits and respective dates 
     greatest_increase_profits = max(monthly_changes)
@@ -67,7 +69,7 @@ with open(file_path, 'r') as csvfile:
     print("----------------------------------------------------------")
     print("Total Months: " + str(count))
     print("Total Profits: " + "$" + str(total_profit))
-    print("Average Change: " + "$" + str(int(average_change_profits)))
+    print("Average Change: " + "$" + str(format(average_change_profits, '.2f')))
     print("Greatest Increase in Profits: " + str(date_increase) + " ($" + str(greatest_increase_profits) + ")")
     print("Greatest Decrease in Profits: " + str(date_decrease) + " ($" + str(greatest_decrease_profits)+ ")")
     print("----------------------------------------------------------")
@@ -78,7 +80,7 @@ with open('financial_analysis.txt', 'w') as text:
     text.write("----------------------------------------------------------\n\n")
     text.write("Total Months: " + str(count) + "\n")
     text.write("Total Profits: " + "$" + str(total_profit) + "\n")
-    text.write("Average Change: " + "$" + str(int(average_change_profits)) + "\n")
+    text.write("Average Change: " + "$" + str(format(average_change_profits, '.2f')) + "\n")
     text.write("Greatest Increase in Profits: " + str(date_increase) + " ($" + str(greatest_increase_profits) + ")\n")
     text.write("Greatest Decrease in Profits: " + str(date_decrease) + " ($" + str(greatest_decrease_profits)+ ")\n")
     text.write("----------------------------------------------------------\n")
