@@ -5,7 +5,7 @@ import csv
 #Importing .csv file from local repo and outline of file path
 script_dir = os.path.dirname(os.path.abspath('budget_data.csv'))
 
-data_folder = os.path.join(script_dir, 'PyBank', 'Resources')
+data_folder = os.path.join(script_dir, 'Resources')
 
 file_path = os.path.join(data_folder, 'budget_data.csv')
 
@@ -55,7 +55,6 @@ with open(file_path, 'r') as csvfile:
     #Calculate the average change in profits
     average_change_profits = (total_change_profits)/(count - 1)
     formatted_average = format(average_change_profits, '.2f')
-    print("Average Change Profits: {}".format(formatted_average))
 
     #Find the minimum and maximum in profits and respective dates 
     greatest_increase_profits = max(monthly_changes)

@@ -5,7 +5,7 @@ import csv
 #Importing .csv file from local repo and outline of file path
 script_dir = os.path.dirname(os.path.abspath('election_data.csv'))
 
-data_folder = os.path.join(script_dir, 'PyPoll', 'Resources')
+data_folder = os.path.join(script_dir, 'Resources')
 
 file_path = os.path.join(data_folder, 'election_data.csv')
 
